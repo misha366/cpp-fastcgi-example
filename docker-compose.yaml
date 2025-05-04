@@ -1,0 +1,14 @@
+services:
+  nginx:
+    image: "nginx:stable-alpine"
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+  cpp:
+    build:
+      context: .
+      dockerfile: cpp.Dockerfile
+    volumes:
+      - ./app:/app
+
