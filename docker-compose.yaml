@@ -11,4 +11,6 @@ services:
       dockerfile: cpp.Dockerfile
     volumes:
       - ./app:/app
+    ports:
+      - "9000:9000"
 
